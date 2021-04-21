@@ -46,15 +46,6 @@ $TOTP = TOTP(["secret" => $base32_encoded_user_secret]);
 $token = $TOTP->get_token();
 ```
 
-Require the valid TOTP token (length 6) to be appended after the password for user *totpuser*.
-```
-if ($username == "totpuser" and
-    $password[0:-6] == "password" and TOTP(["secret" => $base32_encoded_secret])->get_token() == $password[-6:])
-{
-  Authenticate();
-}
-```
-
 # Constructor
 The TOTP constructor has these optional arguments:
 * *secret*: The secret to calculate tokens for. (Default: Random 64 character string).
