@@ -1,7 +1,7 @@
 # Class TOTP
 A Class implementing Time-based One-time Password Algorithm (TOTP) [rfc6238](https://tools.ietf.org/html/rfc6238) can be used with eg. [Google Authenticator](https://en.wikipedia.org/wiki/Google_Authenticator).
 
-You need to run Halon 5.5 or newer, as the functions *base32_decode()* and *base32_endode()* are used.
+You need to run Halon 5.5 or newer, as the functions *base32_decode()* and *base32_encode()* are used.
 
 # Description
 Based on a secret known to you (the Halon system) and the user, you can verify a token
